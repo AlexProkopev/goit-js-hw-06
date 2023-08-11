@@ -26,7 +26,7 @@ const createBoxes = (amount) => {
   divBoxesEl.insertAdjacentHTML("beforeend", isArrayElementDiv.join(" "));
 };
 
-//! Вытягиваем значение инпута событием "input" и в будущем передаём как аргумент на событие клика в функцию createBoxes
+//? Вытягиваем значение инпута событием "input" и в будущем передаём как аргумент на событие клика в функцию createBoxes
 
 const numFromInput = () =>  Number(input.value);
 
@@ -40,5 +40,8 @@ btnCreate.addEventListener("click", () => {
 });
 
 btnDestroy.addEventListener("click", () => {
+  
   divBoxesEl.innerHTML = "";
+  input.value = ""
+  
 });
